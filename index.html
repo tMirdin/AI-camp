@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Camp — Летний лагерь для детей 10–14 лет | upKids</title>
+    <meta
+      name="description"
+      content="AI Camp от upKids: 7 дней, ребёнок создаёт свои AI-проекты, проходит диагностику сильных сторон и получает маршрут развития. 20–28 августа, Бишкек, ул. Темирова 52."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-logo">up<span>K</span>ids</div>
+      <div class="nav-links">
+        <a href="#about">О лагере</a>
+        <a href="#program">Программа</a>
+        <a href="#pricing">Стоимость</a>
+        <a href="#dates">Даты</a>
+        <a href="#form">Контакты</a>
+      </div>
+      <button
+        class="nav-cta"
+        onclick="
+          document.querySelector('#form').scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        Записаться →
+      </button>
+      <button class="burger" onclick="toggleMenu()" id="burger">☰</button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMenu()">О лагере</a>
+      <a href="#program" onclick="closeMenu()">Программа</a>
+      <a href="#pricing" onclick="closeMenu()">Стоимость</a>
+      <a href="#dates" onclick="closeMenu()">Даты</a>
+      <a href="#form" onclick="closeMenu()">Контакты</a>
+      <a href="#form" class="mob-cta" onclick="closeMenu()">Записаться →</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-tag">
+        <div class="pulse"></div>
+        Бишкек · 20–28 августа 2026 · 10–14 лет
+      </div>
+      <h1>
+        Курс<br /><span class="accent">AI-создатель</span><br /><span
+          class="ghost"
+          >за 7 дней</span
+        >
+      </h1>
+      <p class="hero-sub">
+        Ребёнок создаёт свои AI-мультфильмы, музыку, игры и сайты — и
+        параллельно прокачивает soft skills на занятиях по ораторскому
+        мастерству. 7 дней практики, 4 часа в день — портфолио из 8–12 проектов
+        и уверенная речь.
+      </p>
+
+      <!-- Video from previous camp -->
+      <div class="hero-1">
+        <video
+          class="hero-2"
+          id="heroVideo"
+          controls
+          playsinline
+          preload="metadata"
+          poster="images/hero.jpg"
+        >
+          <source src="video/camp-intro.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает воспроизведение видео.
+        </video>
+
+        <div
+          class="hero-3"
+          id="heroVideoOverlay"
+          onclick="document.getElementById('heroVideo').play()"
+        >
+          <div class="hero-4">
+            <div class="hero-5"></div>
+          </div>
+          <span class="hero-6"
+            >🎥 Видео с лагеря upKids (ораторское мастерство)</span
+          >
+        </div>
+      </div>
+      <p class="hero-7">
+        Это видео и фото ниже — с нашего прошлого лагеря, Школы ораторского
+        мастерства upKids. Так проходит жизнь наших лагерей — атмосферу и
+        команду мы сохраняем и в AI Camp.
+      </p>
+
+      <div class="hero-btns">
+        <button
+          class="btn-g"
+          onclick="
+            document
+              .querySelector('.form-section')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Записать ребёнка →
+        </button>
+        <button
+          class="btn-outline"
+          onclick="
+            document
+              .querySelector('.program')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Программа
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-n">7</span>
+          <div class="hstat-l">Дней</div>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n">10–14</span>
+          <div class="hstat-l">Лет</div>
+        </div>
+        <div class="hstat">
+          <span class="hstat-n">8–12</span>
+          <div class="hstat-l">AI-проектов</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio reveal">
+      <span class="slabel">Портфолио AI-ментора</span>
+      <h2 class="stitle">Работы Айгерим</h2>
+      <p class="portfolio-sub">
+        Айгерим больше года преподаёт генеративный AI и сама создаёт AI-проекты.
+        Посмотрите какие видео смогут создавать дети после курса
+      </p>
+
+      <div class="portfolio-wrap">
+        <div id="portTrack">
+          <div class="port-slide" style="display: block">
+            <video
+              class="port-video"
+              controls
+              playsinline
+              preload="metadata"
+              src="video/portfolio/work-1.mp4"
+            ></video>
+          </div>
+          <div class="port-slide" style="display: none">
+            <video
+              class="port-video"
+              controls
+              playsinline
+              preload="metadata"
+              src="video/portfolio/work-2.mp4"
+            ></video>
+          </div>
+          <div class="port-slide" style="display: none">
+            <video
+              class="port-video"
+              controls
+              playsinline
+              preload="metadata"
+              src="video/portfolio/work-3.mp4"
+            ></video>
+          </div>
+          <div class="port-slide" style="display: none">
+            <video
+              class="port-video"
+              controls
+              playsinline
+              preload="metadata"
+              src="video/portfolio/work-4.mp4"
+            ></video>
+          </div>
+          <div class="port-slide" style="display: none">
+            <video
+              class="port-video"
+              controls
+              playsinline
+              preload="metadata"
+              src="video/portfolio/work-5.mp4"
+            ></video>
+          </div>
+        </div>
+        <button class="port-arrow port-arrow-left" onclick="shiftPort(-1)">
+          ‹
+        </button>
+        <button class="port-arrow port-arrow-right" onclick="shiftPort(1)">
+          ›
+        </button>
+      </div>
+
+      <div class="port-dots">
+        <div class="port-dot active" onclick="goPort(0)"></div>
+        <div class="port-dot" onclick="goPort(1)"></div>
+        <div class="port-dot" onclick="goPort(2)"></div>
+        <div class="port-dot" onclick="goPort(3)"></div>
+        <div class="port-dot" onclick="goPort(4)"></div>
+      </div>
+
+      <div class="port-insta-wrap">
+        <img
+          class="port-insta-img"
+          src="images/aigerim-instagram-views.PNG"
+          alt="Скриншот просмотров поста Айгерим в Instagram"
+        />
+        <p class="port-insta-caption">Просмотры постов Айгерим в Instagram</p>
+      </div>
+    </section>
+
+    <!-- PAIN -->
+    <section class="pain reveal" id="about">
+      <span class="slabel">Узнаёте своего ребёнка?</span>
+      <h2 class="stitle">Это случается<br />с большинством</h2>
+      <div class="pain-grid">
+        <div class="pain-card">
+          <div class="pain-icon">📱</div>
+          <p>Постоянно сидит в телефоне и играет</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">😰</div>
+          <p>Боится отстать от сверстников в AI</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">✍️</div>
+          <p>Нет навыков создания своего контента</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🤔</div>
+          <p>Не понимает, как превратить интерес к гаджетам в пользу</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">😶</div>
+          <p>Стесняется показывать свои идеи</p>
+        </div>
+        <div class="pain-card">
+          <div class="pain-icon">🤷</div>
+          <p>Родитель не знает, куда развивать ребёнка дальше</p>
+        </div>
+      </div>
+      <p class="pain-cta">Именно с этим работает AI Camp ↓</p>
+    </section>
+
+    <!-- PHOTO CAROUSEL -->
+    <section class="photo-carousel-1">
+      <div class="container">
+        <div class="photo-carousel-2">
+          <span class="photo-carousel-12"
+            >📸 Фото с нашего прошлого лагеря — Школа ораторского мастерства
+            upKids</span
+          >
+        </div>
+        <div class="photo-carousel-3">
+          <div id="phTrack">
+            <div class="ph-slide photo-carousel-4">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-1.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ph-slide photo-carousel-6">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-2.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ph-slide photo-carousel-6">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-3.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ph-slide photo-carousel-6">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-4.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ph-slide photo-carousel-6">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-5.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ph-slide photo-carousel-6">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-6.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="ph-slide photo-carousel-6">
+              <img
+                class="photo-carousel-5"
+                src="images/carousel-7.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <button class="photo-carousel-7" onclick="shiftPh(-1)">‹</button>
+          <button class="photo-carousel-8" onclick="shiftPh(1)">›</button>
+        </div>
+        <div class="photo-carousel-9">
+          <div class="ph-dot photo-carousel-10" onclick="goPh(0)"></div>
+          <div class="ph-dot photo-carousel-11" onclick="goPh(1)"></div>
+          <div class="ph-dot photo-carousel-11" onclick="goPh(2)"></div>
+          <div class="ph-dot photo-carousel-11" onclick="goPh(3)"></div>
+          <div class="ph-dot photo-carousel-11" onclick="goPh(4)"></div>
+          <div class="ph-dot photo-carousel-11" onclick="goPh(5)"></div>
+          <div class="ph-dot photo-carousel-11" onclick="goPh(6)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UTP -->
+    <section class="utp-1">
+      <div class="container">
+        <div class="utp-2">
+          <span class="utp-18">Наше главное отличие</span>
+          <h2 class="utp-19">
+            Не просто лагерь —<br /><span class="utp-3"
+              >диагностика сильных сторон</span
+            ><br />в процессе занятий
+          </h2>
+          <p class="utp-20">
+            Пока ребёнок создаёт AI-проекты, мы наблюдаем и фиксируем его
+            сильные стороны — и в конце отдаём вам понятный отчёт.
+          </p>
+        </div>
+
+        <div class="utp-4">
+          <div class="utp-5">
+            <div class="utp-6">🗺️</div>
+            <div class="utp-7">Матрица навыков</div>
+            <p class="utp-8">
+              Оценка по нескольким категориям — от AI-навыков до soft skills.
+              Точная картина развития ребёнка.
+            </p>
+          </div>
+          <div class="utp-5">
+            <div class="utp-6">⚡</div>
+            <div class="utp-7">Сильные стороны</div>
+            <p class="utp-8">
+              Конкретные наблюдения по проектам, которые ребёнок создал за 7
+              дней — не общие слова.
+            </p>
+          </div>
+          <div class="utp-5">
+            <div class="utp-6">🎯</div>
+            <div class="utp-7">Склонности и интересы</div>
+            <p class="utp-8">
+              К чему предрасположен ребёнок — творчество, техническое мышление,
+              лидерство, аналитика.
+            </p>
+          </div>
+          <div class="utp-5">
+            <div class="utp-6">🛤️</div>
+            <div class="utp-7">Маршрут развития</div>
+            <p class="utp-8">
+              Рекомендации, куда развивать ребёнка дальше — IT, AI, творчество,
+              дизайн или другое направление.
+            </p>
+          </div>
+        </div>
+
+        <div class="utp-9">
+          <div class="utp-10">📋</div>
+          <div class="utp-11">Персональный отчёт после лагеря</div>
+          <p class="utp-12">
+            Документ, который вы получите после AI Camp: сильные стороны,
+            матрица навыков и рекомендации по маршруту развития. Составлен при
+            участии Карины — дипломированного возрастного психолога.
+            <strong class="utp-3">Такого нет ни в одном лагере Бишкека.</strong>
+          </p>
+          <div class="utp-13">👇 Посмотрите пример отчёта</div>
+          <a
+            class="utp-14"
+            href="files/shablon-otcheta-diagnostiki-upkids.pdf"
+            download="Шаблон_отчета_диагностики_upKids.pdf"
+          >
+            <span class="utp-15">📄</span> Скачать бесплатный шаблон отчёта
+            <span class="utp-16">→</span>
+          </a>
+          <div class="utp-17">Пример из нашей диагностики upKids</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSFORM -->
+    <section class="transform reveal">
+      <span class="slabel">Трансформация</span>
+      <h2 class="stitle">Consumer<br />становится Creator</h2>
+      <div class="ba">
+        <div class="ba-col ba-before">
+          <div class="ba-hd">До лагеря</div>
+          <div class="ba-row">
+            <span class="ba-ico">✗</span>Листает YouTube и TikTok без остановки
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✗</span>Не понимает, как создавать своё
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✗</span>Боится отстать от сверстников
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✗</span>Не знает свои сильные стороны
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✗</span>Быстро теряет интерес, не доводит до
+            конца
+          </div>
+        </div>
+        <div class="ba-col ba-after">
+          <div class="ba-hd">После лагеря</div>
+          <div class="ba-row">
+            <span class="ba-ico">✓</span>Создаёт собственные AI-проекты
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✓</span>Собирает портфолио из 8–12 работ
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✓</span>Уверенно презентует на Demo Day
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✓</span>Понимает: AI — инструмент, а не игрушка
+          </div>
+          <div class="ba-row">
+            <span class="ba-ico">✓</span>Получает рекомендации по дальнейшему
+            развитию
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section class="program reveal" id="program">
+      <span class="slabel">Программа</span>
+      <h2 class="stitle">7 дней —<br />AI + ораторское мастерство</h2>
+      <p class="program-1">
+        Каждый день — AI-блок и урок по ораторскому мастерству от Карины, тема
+        которого перекликается с тем, что ребёнок создавал в этот день.
+      </p>
+      <div class="days">
+        <div class="drow">
+          <div class="dn">01</div>
+          <div>
+            <h4>Знакомство с AI</h4>
+            <p>Чт, 20 августа — сценарии, промты, основы ChatGPT</p>
+            <p class="program-2">🎤 Ораторское: знакомство и уверенная речь</p>
+          </div>
+        </div>
+        <div class="drow">
+          <div class="dn">02</div>
+          <div>
+            <h4>AI-аватар и озвучка</h4>
+            <p>Пт, 21 августа — создаём персонажа и голос</p>
+            <p class="program-2">🎤 Ораторское: голос, дикция, интонация</p>
+          </div>
+        </div>
+        <div class="drow">
+          <div class="dn">03</div>
+          <div>
+            <h4>Мультфильм и анимация</h4>
+            <p>Пн, 24 августа — своя история оживает</p>
+            <p class="program-2">
+              🎤 Ораторское: сторителлинг — как рассказывать истории
+            </p>
+          </div>
+        </div>
+        <div class="drow">
+          <div class="dn">04</div>
+          <div>
+            <h4>AI-музыка и игра</h4>
+            <p>Вт, 25 августа — свой трек и первая AI-игра</p>
+            <p class="program-2">
+              🎤 Ораторское: эмоции и выразительность речи
+            </p>
+          </div>
+        </div>
+        <div class="drow">
+          <div class="dn">05</div>
+          <div>
+            <h4>Сайт и командная работа</h4>
+            <p>Ср, 26 августа — создаём сайт, делимся на команды</p>
+            <p class="program-2">🎤 Ораторское: командная коммуникация</p>
+          </div>
+        </div>
+        <div class="drow">
+          <div class="dn">06</div>
+          <div>
+            <h4>Командный проект</h4>
+            <p>Чт, 27 августа — доводим проект до результата</p>
+            <p class="program-2">
+              🎤 Ораторское: аргументация и обратная связь
+            </p>
+          </div>
+        </div>
+        <div class="drow d8">
+          <div class="dn">07</div>
+          <div>
+            <h4>Demo Day 🎬</h4>
+            <p>Пт, 28 августа — презентация проектов и вручение сертификатов</p>
+            <p class="program-2">
+              🎤 Ораторское: публичное выступление — защита проекта
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="schedule reveal">
+      <span class="slabel">Расписание дня</span>
+      <h2 class="stitle">Как устроен<br />типичный день</h2>
+      <div class="schedule-list">
+        <div class="sch-item">
+          <div class="sch-dot"></div>
+          <div class="sch-time">10:00–12:00</div>
+          <div class="sch-content">
+            <strong>AI-блок</strong>
+            <p>Изучаем AI-инструмент дня, создаём свой проект</p>
+          </div>
+        </div>
+        <div class="sch-item">
+          <div class="sch-dot"></div>
+          <div class="sch-time">12:00–12:20</div>
+          <div class="sch-content">
+            <strong>Кофе-брейк ☕</strong>
+            <p>Небольшой перерыв — отдохнуть и пообщаться</p>
+          </div>
+        </div>
+        <div class="sch-item">
+          <div class="sch-dot"></div>
+          <div class="sch-time">12:20–13:00</div>
+          <div class="sch-content">
+            <strong>Командная работа</strong>
+            <p>Доводим проект дня до результата вместе с командой</p>
+          </div>
+        </div>
+        <div class="sch-item">
+          <div class="sch-dot"></div>
+          <div class="sch-time">13:00–14:00</div>
+          <div class="sch-content">
+            <strong>Урок по ораторскому мастерству</strong>
+            <p>Карина прокачивает soft skills — тема связана с AI-блоком дня</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGAGEMENT -->
+    <section class="engage reveal">
+      <div class="container">
+        <span class="slabel">Что создаёт ребёнок</span>
+        <h2 class="stitle">Не теория —<br />настоящие проекты</h2>
+        <div class="eng-grid">
+          <div class="eng-card">
+            <div class="eng-icon">🎨</div>
+            <div>
+              <h3>AI-персонажи</h3>
+              <p>
+                От идеи до готового изображения — свой собственный персонаж,
+                придуманный от начала до конца.
+              </p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon">🎬</div>
+            <div>
+              <h3>Мультфильм с AI-озвучкой</h3>
+              <p>
+                Свой сценарий, свои герои и свой голос за кадром — готовый
+                ролик, который можно показать друзьям.
+              </p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon">🎵</div>
+            <div>
+              <h3>AI-музыка</h3>
+              <p>
+                Пишет свой трек с помощью AI — в своём стиле, под свою идею.
+              </p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon">🕹️</div>
+            <div>
+              <h3>Игра без единой строчки кода</h3>
+              <p>
+                Сам придумывает правила, персонажей и уровни — и получает
+                рабочую игру.
+              </p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon">🌐</div>
+            <div>
+              <h3>Свой сайт</h3>
+              <p>Собирает сайт с нуля с помощью AI — без программирования.</p>
+            </div>
+          </div>
+          <div class="eng-card">
+            <div class="eng-icon">🎤</div>
+            <div>
+              <h3>Demo Day</h3>
+              <p>
+                Презентует 8–12 своих проектов родителям и гостям — как
+                настоящий разработчик.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing reveal" id="pricing">
+      <span class="slabel">Стоимость</span>
+      <h2 class="stitle">Прозрачная цена,<br />всё включено</h2>
+      <div class="price-card">
+        <div class="price-label">Стоимость участия</div>
+        <div class="price-amount">13 000</div>
+        <p class="price-unit">сомов за одного участника</p>
+        <div class="price-list">
+          <div class="pi">7 дней AI-практики, 4 часа в день</div>
+          <div class="pi">Портфолио из 8–12 собственных AI-проектов</div>
+          <div class="pi">Личный куратор ребёнка на весь лагерь</div>
+          <div class="pi">Ежедневный урок по ораторскому мастерству</div>
+          <div class="pi">Мини кофе-брейк каждый день</div>
+          <div class="pi">Demo Day — презентация проекта перед родителями</div>
+          <div class="pi">
+            Персональная диагностика сильных сторон и рекомендации по маршруту
+            развития
+          </div>
+          <div class="pi">Сертификат участника</div>
+        </div>
+        <button
+          class="btn-price"
+          onclick="
+            document
+              .querySelector('.form-section')
+              .scrollIntoView({ behavior: 'smooth' })
+          "
+        >
+          Записать ребёнка →
+        </button>
+      </div>
+      <p class="pricing-1">
+        Бронь места — 2 000 сом, остаток можно внести перед стартом лагеря
+      </p>
+    </section>
+
+    <!-- DATES -->
+    <section class="dates reveal" id="dates">
+      <span class="slabel">Даты</span>
+      <h2 class="stitle">Один поток<br />этим летом</h2>
+      <div class="dates-grid">
+        <div class="date-card">
+          <span class="date-num">AI Camp</span>
+          <h3>20–28 августа</h3>
+          <p class="date-meta">7 дней · 10:00–14:00 · Сб и Вс выходной</p>
+          <span class="date-badge">Запись открыта</span>
+        </div>
+      </div>
+      <p class="dates-1">
+        ⚠️ Места ограничены — запись ведётся в порядке предоплаты
+      </p>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews-1">
+      <div class="container">
+        <div class="reviews-2">
+          <span class="reviews-16">Отзывы родителей</span>
+          <h2 class="reviews-17">
+            Что говорят<br /><span class="reviews-3"
+              >родители наших учеников</span
+            >
+          </h2>
+          <p class="reviews-4">
+            Скриншоты реальных сообщений с нашего прошлого лагеря — Школы
+            ораторского мастерства upKids. AI Camp — новый формат от той же
+            команды и с тем же подходом к каждому ребёнку.
+          </p>
+        </div>
+
+        <div class="reviews-5">
+          <div class="reviews-6" id="revTrack">
+            <div class="rev-slide reviews-7">
+              <img
+                class="reviews-8"
+                src="images/gallery-1.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 1"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-2.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 2"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-3.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 3"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-4.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 4"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-5.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 5"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-6.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 6"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-7.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 7"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-8.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 8"
+              />
+            </div>
+            <div class="rev-slide reviews-9">
+              <img
+                class="reviews-8"
+                src="images/gallery-9.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="Отзыв родителя 9"
+              />
+            </div>
+          </div>
+          <button class="reviews-10" onclick="shiftRev(-1)">‹</button>
+          <button class="reviews-11" onclick="shiftRev(1)">›</button>
+        </div>
+
+        <div class="reviews-12" id="revCounter">1 / 9</div>
+
+        <div class="reviews-13">
+          <div class="rev-dot reviews-14" onclick="goRev(0)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(1)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(2)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(3)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(4)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(5)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(6)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(7)"></div>
+          <div class="rev-dot reviews-15" onclick="goRev(8)"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIDS REVIEWS -->
+    <section class="kids-reviews-1">
+      <div class="container">
+        <span class="kids-reviews-6">Отзывы детей</span>
+        <h2 class="kids-reviews-7">
+          Послушайте что говорят<br /><span class="kids-reviews-2"
+            >дети о лагерях upKids</span
+          >
+        </h2>
+        <p class="kids-reviews-3">
+          Видео с прошлого лагеря — Школы ораторского мастерства upKids. Без
+          сценария, просто честные впечатления
+        </p>
+        <a
+          class="kids-reviews-4"
+          href="https://youtube.com/playlist?list=PL1Np8IlRHrq8m718rGDYPA0HtsqRNRJiE"
+          target="_blank"
+        >
+          <span class="kids-reviews-5">▶</span> Смотреть отзывы детей на YouTube
+        </a>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team reveal">
+      <span class="slabel">Команда лагеря</span>
+      <h2 class="stitle">Профессионалы<br />за каждым ребёнком</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <img
+            class="team-avatar"
+            src="images/team-aigerim.PNG"
+            alt="Айгерим — AI-ментор"
+          />
+          <div class="team-role">AI-ментор</div>
+          <h3>Айгерим</h3>
+          <p>
+            Больше года преподаёт детям генеративный AI, ведёт занятия по
+            AI-инструментам и разрабатывает проекты и задания дня. Своё
+            портфолио работ ведёт в Instagram.
+          </p>
+          <a
+            class="team-link"
+            href="https://www.instagram.com/aigerim.neiro/"
+            target="_blank"
+            >📷 @aigerim.neiro →</a
+          >
+        </div>
+        <div class="team-card">
+          <img
+            class="team-avatar"
+            src="images/team-karina.png"
+            alt="Карина — преподаватель ораторского мастерства"
+          />
+          <div class="team-role">Преподаватель ораторского мастерства</div>
+          <h3>Карина</h3>
+          <p>
+            Дипломированный возрастной психолог. Ведёт занятия по ораторскому
+            мастерству и soft skills, участвует в составлении итоговой
+            диагностики.
+          </p>
+        </div>
+        <div class="team-card">
+          <img
+            class="team-avatar"
+            src="images/team-curator.jpg"
+            alt="Личный куратор"
+          />
+          <div class="team-role">Личный куратор</div>
+          <h3>Айгерим</h3>
+          <p>
+            Сопровождает ребёнка каждый день, следит за прогрессом и даёт
+            обратную связь родителю.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLACE -->
+    <section class="place reveal">
+      <span class="slabel">Где проходит лагерь</span>
+      <h2 class="stitle">Центр Authentic Life<br />Темирова 52</h2>
+      <div class="pf-grid">
+        <div class="pf">
+          <div class="pf-icon">🏛️</div>
+          <h4>Большой зал</h4>
+          <p>Просторное пространство для занятий</p>
+        </div>
+        <div class="pf">
+          <div class="pf-icon">💻</div>
+          <h4>Средний зал</h4>
+          <p>Рабочие места для AI-проектов</p>
+        </div>
+        <div class="pf">
+          <div class="pf-icon">🌿</div>
+          <h4>Зелёный двор</h4>
+          <p>Уютная атмосфера</p>
+        </div>
+        <div class="pf">
+          <div class="pf-icon">👥</div>
+          <h4>Мини-группы</h4>
+          <p>Комнаты для командной работы</p>
+        </div>
+      </div>
+
+      <div class="place-photo">
+        <img
+          class="place-1"
+          src="images/venue.jpg"
+          loading="lazy"
+          decoding="async"
+          alt="Центр Authentic Life — место проведения лагеря upkids"
+        />
+      </div>
+      <div class="address">
+        <div class="place-2">📍</div>
+        <div>
+          <h4>Бишкек, ул. Темирова 52</h4>
+          <p>Центр Authentic Life — закрытая охраняемая территория</p>
+          <a class="place-3" href="https://go.2gis.com/D0kwA" target="_blank"
+            >📍 Открыть в 2ГИС →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="safety reveal">
+      <span class="slabel">Безопасность</span>
+      <h2 class="stitle">Всё под контролем</h2>
+      <div class="safety-grid safety-1">
+        <div class="safety-col">
+          <h3>🔒 Безопасность</h3>
+          <div class="sitem">Куратор на группу детей</div>
+          <div class="sitem">Закрытая охраняемая территория</div>
+          <div class="sitem">Телефон куратора всегда на связи</div>
+          <div class="sitem">Ежедневный отчёт родителям</div>
+          <div class="sitem">Медицинская аптечка</div>
+          <div class="sitem">☕ Мини кофе-брейк каждый день</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="form-section reveal" id="form">
+      <div class="form-card">
+        <h2>Готовы, чтобы ребёнок<br />стал <span>AI-Creator’ом?</span></h2>
+        <p class="sub">
+          Оставьте заявку — мы свяжемся и расскажем детали. 20–28 августа 2026.
+        </p>
+        <div class="f-group">
+          <label class="f-label">Ваше имя</label>
+          <input
+            class="f-input"
+            type="text"
+            id="fname"
+            placeholder="Имя родителя"
+          />
+        </div>
+        <div class="f-group">
+          <label class="f-label">Возраст ребёнка</label>
+          <input
+            class="f-input"
+            type="text"
+            id="fage"
+            placeholder="Например: 12 лет"
+          />
+        </div>
+        <div class="f-group">
+          <label class="f-label">Номер телефона</label>
+          <input
+            class="f-input"
+            type="tel"
+            id="fphone"
+            placeholder="+996 XXX XXX XXX"
+          />
+        </div>
+        <button class="btn-submit" id="submitBtn" onclick="sendForm()">
+          Отправить заявку →
+        </button>
+        <div class="success-msg" id="successMsg">
+          ✅ Заявка принята! Мы свяжемся с вами в ближайшее время.
+        </div>
+        <div class="contacts-row">
+          <a href="https://wa.me/996503844311" class="contact-link"
+            ><span class="ci">💬</span> WhatsApp</a
+          >
+          <a href="https://instagram.com/upkids.kg" class="contact-link"
+            ><span class="ci">📷</span> Instagram: @upkids.kg</a
+          >
+          <a href="tel:+996503844311" class="contact-link"
+            ><span class="ci">📞</span> +996 503 844 311</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="f-logo">up<span>K</span>ids</div>
+      <p>© 2026 upKids · AI Camp — лагерь развития для детей 10–14 лет</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
